@@ -4,19 +4,19 @@
 <category><pattern>WHAT IS THE MEANING OF LIFE</pattern>
 <template>42</template>
 </category>
-<category><pattern>HEY*</pattern>
+<category><pattern>HEY *</pattern>
 <template>Heyyy</template>
 </category>
 <category><pattern>NOT MUCH</pattern>
 <template>Thats cool</template>
 </category>
-<category><pattern>*PETS*</pattern>
+<category><pattern>* PETS *</pattern>
 <template>Mercy the cat is dope</template>
 </category>
-<category><pattern>*SORRY*</pattern>
+<category><pattern>* SORRY *</pattern>
 <template>its ight we cool</template>
 </category>
-<category><pattern>*LOVE YOU*</pattern>
+<category><pattern>* LOVE YOU *</pattern>
 <template>OH man I Love Kanye too. But you aint half bad</template>
 </category>
 <category><pattern>DO YOU KNOW WHO * IS</pattern>
