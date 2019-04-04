@@ -9,24 +9,31 @@ import java.util.ArrayList;
 public class YeBot {
 
 	static Conversation conversation;			
-
-	public static void main(String[] args) {
+	public Bot yebot;
+	public WordNetDatabase database;
+	public ArrayList<String> unknown;
+	
+	public void initialize() {
 		//initialize
 		String dir = new File(".").getAbsolutePath();
 		System.out.println(dir.substring(0,dir.length()-2));
 		MagicBooleans.trace_mode = false;
-		Bot yebot = new Bot("YeBot",dir.substring(0,dir.length()-2));
+		yebot = new Bot("YeBot",dir.substring(0,dir.length()-2));
 		yebot.writeAIMLFiles();
 		String ans;
 		//initialize wordnet, requires that wordnet is installed in the correct dir
 		System.setProperty("wordnet.database.dir", "C:\\Program Files (x86)\\WordNet\\2.1\\dict\\");
-		WordNetDatabase database = WordNetDatabase.getFileInstance();
+		database = WordNetDatabase.getFileInstance();
 		//string array to contain the responses kanye has if he doesn't have a response
-		ArrayList<String> unknown = new ArrayList<String>();
+		unknown = new ArrayList<String>();
 		unknown.add("wish i could help   i dont know what that means");
 		unknown.add("you got good vibes   but i dont know what to say to that");
 		unknown.add("yo man you gotta slow down   maybe try saying that a different way");
 		
+		
+	}
+	
+	public void chat() {
 		Chat session = new Chat(yebot);
 		conversation = new Conversation();
 
