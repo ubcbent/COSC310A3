@@ -3,6 +3,8 @@ import org.alicebot.ab.*;
 import java.io.File;
 import edu.smu.tspell.wordnet.*;
 import java.util.ArrayList;
+import opennlp.tools.postag.*;
+import java.io.*;
 /**
  * YeBot is the main class where the conversation is held.
  */
@@ -12,6 +14,7 @@ public class YeBot {
 	public Bot yebot;
 	public WordNetDatabase database;
 	public ArrayList<String> unknown;
+	public Chat session;
 	
 	public void initialize() {
 		//initialize
@@ -34,7 +37,7 @@ public class YeBot {
 	}
 	
 	public void chat() {
-		Chat session = new Chat(yebot);
+		session = new Chat(yebot);
 		conversation = new Conversation();
 
 		String input = "test";
@@ -67,30 +70,8 @@ public class YeBot {
 				}
 				else {
 					//regular response
-					// process synonyms if kanye has no response !REQUIRES WORDNET TO BE INSTALLED!
-					String response = session.multisentenceRespond(input);
-					if(unknown.contains(response)) {
-						// kanye is confused, typical
-						String[] words = input.split(" ");
-						outerloop:
-						for(int j = 0; j<words.length;j++) {
-							Synset[] syns = database.getSynsets(words[j]);
-							if(syns.length!=0) {
-								for(Synset syn : syns) {
-									String[] replace = syn.getWordForms();
-									for(String r : replace) {
-										String inputnew = input.replaceAll(words[j]+" ", r+" ");
-										response = session.multisentenceRespond(inputnew);
-										if(!unknown.contains(response)) {
-											// if we find a response, break and output
-											input = inputnew;
-											break outerloop;
-										}
-									}
-								}
-							}
-						}
-					}
+					
+					String response = getResponse(input);
 					output = conversation.response(response);
 				}
 			}	
@@ -103,6 +84,57 @@ public class YeBot {
 //				ans = conversation.response("Invalid input. Do you want to start our conversation over? (Y/N)");
 		//while(ans.toUpperCase().equals("Y"));	//start over if answer is "Y" or "y"
 
+	}
+	
+	public String getResponse(String input) {
+		// process synonyms if kanye has no response !REQUIRES WORDNET TO BE INSTALLED!
+		String response = session.multisentenceRespond(input);
+		if(unknown.contains(response)) {
+			// kanye is confused, typical
+			String[] words = input.split(" ");
+			outerloop:
+			for(int j = 0; j<words.length;j++) {
+				Synset[] syns = database.getSynsets(words[j]);
+				if(syns.length!=0) {
+					for(Synset syn : syns) {
+						String[] replace = syn.getWordForms();
+						for(String r : replace) {
+							String inputnew = input.replaceAll(words[j]+" ", r+" ");
+							response = session.multisentenceRespond(inputnew);
+							if(!unknown.contains(response)) {
+								// if we find a response, break and output
+								break outerloop;
+							}
+						}
+					}
+				}	
+			}
+		}
+		
+		//if still no response, check for nouns to mention
+		if(unknown.contains(response)) {
+			try {
+				InputStream in = new FileInputStream("res/en-pos-maxent.bin");
+				POSModel model = new POSModel(in);
+				POSTaggerME tagger = new POSTaggerME(model);
+				String[] words = input.split(" ");
+				String[] tags = tagger.tag(words); // contains tags for each word in input
+				
+				for(int i = 0; i<tags.length;i++) {
+					if(tags[i].contains("NN")){
+						// noun detected
+						response = "I aint know nothin about "+ words[i];
+						break;
+					}
+				}
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return response;
 	}
 	
 }

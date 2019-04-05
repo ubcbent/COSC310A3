@@ -93,9 +93,6 @@ where its like shes a reality star and im a rapper   who do you love</template>
 <category><pattern>I LOVE *</pattern>
 <template>Love everyone  Start the year clean   Just be   All love</template>
 </category>
-<category><pattern>I LIKE *</pattern>
-<template>Love everyone  Start the year clean   Just be   All love</template>
-</category>
 <category><pattern>DO YOU HAVE KIDS</pattern>
 <template>I have three kids, North, Saint and Chicago   I would like to have seven</template>
 </category>
