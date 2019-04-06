@@ -8,7 +8,7 @@
 <template><random>
 <li>aight let me make it simpler for ya, why dont you tell me your favourite song</li>
 <li>okay heres an easy one for you then   you like books ye?</li>
-<li>how about this then, what do you think of god?</li>
+<li>how about this then, what do you think of god man?</li>
 <li>i like you</li>
 </random></template>
 </category>
@@ -21,18 +21,15 @@
 <category><pattern>YO MAN YOU GOTTA SLOW DOWN MAYBE TRY SAYING THAT A DIFFERENT *</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
-<category><pattern>AY MAN IM NOT ABOUT THAT READING LIFE LIVE IN THE MOMENT, NOT IN A BOOK</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
-<template>fully agree, books are no good</template>
+<category><pattern>_ NOT IN A BOOK</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS *</that>
+<template>fully agree, they are no good</template>
 </category>
-<category><pattern>PLEASE STOP BRINGING UP BOOKS MAN I DONT LIKE EM</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
+<category><pattern>_ DONT LIKE EM</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS *</that>
 <template>sorry man,  forgot i already asked</template>
 </category>
-</aiml>
-
-
-
-
-
+<category><pattern>AS LONG AS GOD IS ON MY SIDE WE CAN CHANGE THE WORLD</pattern><that>HOW ABOUT THIS THEN WHAT DO YOU THINK OF GOD *</that>
+<template>thats what im saying</template>
+</category>
 <category><pattern>HI *</pattern>
 <template>heyy, how you been?</template>
 </category>
