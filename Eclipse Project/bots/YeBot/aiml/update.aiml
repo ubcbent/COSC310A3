@@ -2,7 +2,11 @@
 <aiml>
 <!--  -->
 <category><pattern>BUILD</pattern>
+<<<<<<< HEAD
 <template>Fri Apr 05 19:53:08 PDT 2019</template>
+=======
+<template>Fri Apr 05 19:53:05 PDT 2019</template>
+>>>>>>> 57965af62106c15cda49b92d569b4c3aa09e4a29
 </category>
 <category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
 <template>Program AB 0.0.4.2 beta -- AI Foundation Reference AIML 2.0 implementation</template>
