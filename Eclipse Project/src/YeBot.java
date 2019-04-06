@@ -32,7 +32,8 @@ public class YeBot {
 		unknown.add("wish i could help   i dont know what that means");
 		unknown.add("you got good vibes   but i dont know what to say to that");
 		unknown.add("yo man you gotta slow down   maybe try saying that a different way");
-		
+		unknown.add("sorry man dont know what you're saying");
+		unknown.add("i can't understand, try something else");
 		
 	}
 	
