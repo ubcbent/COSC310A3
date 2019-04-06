@@ -2,7 +2,7 @@
 <aiml>
 <!--  -->
 <category><pattern>YE IS IN THE BUILDING</pattern>
-<template>yo for real? im ye too!</template>
+<template>yo for real im ye too!</template>
 </category>
 <category><pattern>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</pattern>
 <template><random>
