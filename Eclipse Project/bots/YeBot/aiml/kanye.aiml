@@ -21,10 +21,10 @@
 <category><pattern>YO MAN YOU GOTTA SLOW DOWN MAYBE TRY SAYING THAT A DIFFERENT *</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
-<category><pattern>ay man im not about that reading life live in the moment, not in a book</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
+<category><pattern>AY MAN IM NOT ABOUT THAT READING LIFE LIVE IN THE MOMENT, NOT IN A BOOK</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
 <template>fully agree, books are no good</template>
 </category>
-<category><pattern>please stop bringing up books man i dont like em</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
+<category><pattern>PLEASE STOP BRINGING UP BOOKS MAN I DONT LIKE EM</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
 <template>sorry man,  forgot i already asked</template>
 </category>
 </aiml>
