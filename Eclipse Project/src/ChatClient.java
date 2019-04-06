@@ -5,7 +5,7 @@ import org.alicebot.ab.*;
 public class ChatClient {
 	
 	public static int TCPMessagePort = 1248;
-	public static String address = "192.168.1.71"; // enter other bot's ip address
+	public static String address = "192.168.1.65"; // enter other bot's ip address
 	
 	public Socket messageSocket;
 	
@@ -16,9 +16,9 @@ public class ChatClient {
 		
 		
 		try {
-			ServerSocket welcomeSocket = new ServerSocket(TCPMessagePort); //run these first two lines if we are second
-			Socket socket = welcomeSocket.accept();
-			//Socket socket = new Socket(address,TCPMessagePort); //run if we are first
+			//ServerSocket welcomeSocket = new ServerSocket(TCPMessagePort); //run these first two lines if we are second
+			//Socket socket = welcomeSocket.accept();
+			Socket socket = new Socket(address,TCPMessagePort); //run if we are first
 			DataOutputStream request = new DataOutputStream(socket.getOutputStream());
 			BufferedReader response = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			
@@ -26,9 +26,15 @@ public class ChatClient {
 			YeBot client = new YeBot();
 			client.initialize();
 			client.session = new Chat(client.yebot);
+			try {
+				Thread.sleep(3000);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 			
-			//request.writeBytes("Ye is in the BUILDING!\n"); //run this only if we are the first
-			//System.out.println("Kanye: Ye is in the BUILDING!"); // same with this
+			
+			request.writeBytes("Ye is in the BUILDING!\n"); //run this only if we are the first
+			System.out.println("Kanye: Ye is in the BUILDING!"); // same with this
 			// first message from other bot
 			String reply = response.readLine();
 			while(true) {
