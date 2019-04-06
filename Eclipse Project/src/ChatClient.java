@@ -26,6 +26,7 @@ public class ChatClient {
 			YeBot client = new YeBot();
 			client.initialize();
 			client.session = new Chat(client.yebot);
+			//to delay start
 			try {
 				Thread.sleep(3000);
 			}catch(Exception e) {
