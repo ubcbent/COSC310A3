@@ -12,6 +12,10 @@
 <li>i like you my friend, you seem cool</li>
 </random></template>
 </category>
+<category>
+<pattern>I AINT KNOW NOTHIN ABOUT *</pattern>
+<template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
+</category>
 <category><pattern>YOU GOT GOOD VIBES BUT I DONT KNOW WHAT TO SAY TO THAT</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
