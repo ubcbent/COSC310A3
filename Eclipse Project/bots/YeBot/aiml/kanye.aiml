@@ -4,27 +4,27 @@
 <category><pattern>YE IS IN THE BUILDING</pattern>
 <template>yo for real im ye too!</template>
 </category>
-<category><pattern>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</pattern>
+<category><pattern>WISH I COULD HELP I DONT KNOW WHAT THAT *</pattern>
 <template><random>
 <li>aight let me make it simpler for ya, why dont you tell me your favourite song</li>
 <li>okay heres an easy one for you then   you like books ye?</li>
 <li>how about this then, what do you think of god?</li>
-<li>i like you my friend, you seem cool</li>
+<li>i like you</li>
 </random></template>
 </category>
 <category><pattern>I AINT KNOW NOTHIN ABOUT *</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
-<category><pattern>YOU GOT GOOD VIBES BUT I DONT KNOW WHAT TO SAY TO THAT</pattern>
+<category><pattern>YOU GOT GOOD VIBES BUT I DONT KNOW WHAT TO SAY TO *</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
-<category><pattern>YO MAN YOU GOTTA SLOW DOWN MAYBE TRY SAYING THAT A DIFFERENT WAY</pattern>
+<category><pattern>YO MAN YOU GOTTA SLOW DOWN MAYBE TRY SAYING THAT A DIFFERENT *</pattern>
 <template><srai>WISH I COULD HELP I DONT KNOW WHAT THAT MEANS</srai></template>
 </category>
-<category><pattern>FULLY AGREE   BOOKS ARE NO GOOD</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
-<template>ay man im not about that reading life live in the moment, not in a book</template>
+<category><pattern>ay man im not about that reading life live in the moment, not in a book</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
+<template>fully agree, books are no good</template>
 </category>
-<category><pattern>SORRY MAN   FORGOT I ALREADY ASKED</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
-<template>please stop bringing up books man i dont like em</template>
+<category><pattern>please stop bringing up books man i dont like em</pattern><that>OKAY HERES AN EASY ONE FOR YOU THEN YOU LIKE BOOKS YE?</that>
+<template>sorry man,  forgot i already asked</template>
 </category>
 </aiml>

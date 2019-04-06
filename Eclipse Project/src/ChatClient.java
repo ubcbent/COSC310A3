@@ -27,7 +27,7 @@ public class ChatClient {
 			client.initialize();
 			client.session = new Chat(client.yebot);
 			
-			//request.writeBytes("Ye is in the BUILDING!"); //run this only if we are the first
+			//request.writeBytes("Ye is in the BUILDING!\n"); //run this only if we are the first
 			//System.out.println("Kanye: Ye is in the BUILDING!"); // same with this
 			// first message from other bot
 			String reply = response.readLine();
